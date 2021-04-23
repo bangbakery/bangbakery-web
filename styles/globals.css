@@ -30,4 +30,6 @@ a {
   align-items: center;
   min-height: 95vh;
   background-image: url("/backgrounds/hero-home.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
