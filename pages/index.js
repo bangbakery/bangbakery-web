@@ -12,12 +12,17 @@ export default function Home() {
           <img src="/icons/menu.svg" alt="menu"></img>
         </div>
         <div>
-          <img src="/logos/logo-white.svg" alt="logo"></img>
+          <img src="/logos/logo-white.svg" alt="Bang Bakery"></img>
         </div>
         <div>
           <img src="/icons/cart.svg" alt="cart"></img>
         </div>
       </header>
+      <main>
+        <div id="hero" className="hero-home">
+          <img src="/logos/logo.png" alt="Bang Bakery"></img>
+        </div>
+      </main>
     </div>
   );
 }

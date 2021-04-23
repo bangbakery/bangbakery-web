@@ -23,3 +23,11 @@ a {
   height: 60px;
   padding: 20px;
 }
+
+.hero-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  background-image: url("/backgrounds/hero-home.jpeg");
+}
