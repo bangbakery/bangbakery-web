@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
 html,
 body {
   padding: 0;
@@ -26,10 +28,36 @@ a {
 
 .hero-home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 95vh;
-  background-image: url("/backgrounds/hero-home.jpeg");
+  background-image: url('/backgrounds/hero-home.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 20px;
+}
+
+.hero-home .tagline {
+  font-family: 'Passion One', cursive;
+  color: #fff;
+  font-size: 48px;
+  max-width: 180px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #3a0000;
+}
+
+.order.button {
+  font-family: 'Passion One', cursive;
+  font-size: 36px;
+  color: #fff;
+  background-color: #fd0170;
+  border: 4px solid #b10037;
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.order.button:hover {
+  background-color: #8a003c;
 }

@@ -1,4 +1,7 @@
-import Head from "next/head";
+import Head from 'next/head'
+import Link from 'next/link'
+
+import Header from '../components/header'
 
 export default function Home() {
   return (
@@ -7,22 +10,18 @@ export default function Home() {
         <title>BangBakery</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="header">
-        <div>
-          <img src="/icons/menu.svg" alt="menu"></img>
-        </div>
-        <div>
-          <img src="/logos/logo-white.svg" alt="Bang Bakery"></img>
-        </div>
-        <div>
-          <img src="/icons/cart.svg" alt="cart"></img>
-        </div>
-      </header>
+
+      <Header />
+
       <main>
         <div id="hero" className="hero-home">
-          <img src="/logos/logo.png" alt="Bang Bakery"></img>
+          <img src="/logos/logo.png" alt="Bang Bakery" />
+          <h2 className="tagline">Naturally handmade with love.</h2>
+          <Link href="/order">
+            <a className="order button">Order Breads</a>
+          </Link>
         </div>
       </main>
     </div>
-  );
+  )
 }
