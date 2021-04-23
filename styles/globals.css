@@ -14,3 +14,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.header {
+  display: flex;
+  background-color: #01b1ae;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px;
+}
