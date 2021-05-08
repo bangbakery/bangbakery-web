@@ -25,7 +25,7 @@ export default function Header({ storeStatus = 'close' }) {
       </HStack>
 
       <Stack
-        bg="pink.500"
+        bg="pink.700"
         color="white"
         fontWeight="bold"
         fontSize="xl"
