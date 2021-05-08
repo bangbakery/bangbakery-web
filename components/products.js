@@ -4,6 +4,7 @@ import {
   SimpleGrid,
   IconButton,
   HStack,
+  Text,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 
@@ -41,6 +42,7 @@ export default function Products() {
                 icon={<AddIcon />}
               />
             </HStack>
+            <Text fontSize="md">{product.quantity} breads left</Text>
           </Stack>
         );
       })}

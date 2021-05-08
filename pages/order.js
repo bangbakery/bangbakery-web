@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import { Container, Heading, Flex, Stack } from '@chakra-ui/react'
+import Head from "next/head";
+import { Container, Heading, Flex, Button } from "@chakra-ui/react";
 
-import Header from '../components/header'
-import Products from '../components/products'
+import Header from "../components/header";
+import Products from "../components/products";
 
 export default function OrderPage() {
   return (
-    <Container>
+    <Container p="0">
       <Head>
         <title>Order breads from BangBakery</title>
       </Head>
@@ -20,6 +20,14 @@ export default function OrderPage() {
       </Flex>
 
       <Products />
+      <Flex width="100%" p="5" bg="purple.800" position="fixed" bottom="0">
+        <Button width="100%" bg="#FFFF01" size="lg">
+          <Flex justify="space-between" width="100%">
+            <span>Continue to order 2 items</span>
+            <span>₱450</span>
+          </Flex>
+        </Button>
+      </Flex>
     </Container>
-  )
+  );
 }
