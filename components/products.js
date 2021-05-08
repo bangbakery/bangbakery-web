@@ -12,7 +12,7 @@ import dataProducts from "../data/products.json";
 
 export default function Products() {
   return (
-    <SimpleGrid columns={2} spacing={10} p={5}>
+    <SimpleGrid columns={2} spacing={10} p={5} mb="100px">
       {dataProducts.map((product, index) => {
         return (
           <Stack key={product.name}>

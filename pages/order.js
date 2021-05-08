@@ -23,7 +23,7 @@ export default function OrderPage() {
       <Products />
       <Flex width="100%" p="5" bg="purple.800" position="fixed" bottom="0">
         <Link href="/summary">
-          <Button as="a" width="100%" bg="#FFFF01" size="lg">
+          <Button as="a" width="100%" bg="#FFFF01" size="lg" rounded="full">
             <Flex justify="space-between" width="100%">
               <span>Continue to order 2 items</span>
               <span>₱450</span>

@@ -13,6 +13,22 @@ export default function SummaryPage() {
       </Head>
       <Header />
       <SummaryForm />
+      <Flex justify="center" p={2} bg="pink.500" color="white">
+        <Heading as="h1" size="md" textAlign="center">
+          Please fill and double check your details and summary before placing
+          the order
+        </Heading>
+      </Flex>
+      <Flex width="100%" p="5" bg="purple.800">
+        <Link href="/summary">
+          <Button as="a" width="100%" bg="#FFFF01" size="lg" rounded="full">
+            <Flex justify="space-between" width="100%">
+              <span>Place your order</span>
+              <span>₱450</span>
+            </Flex>
+          </Button>
+        </Link>
+      </Flex>
     </Container>
   );
 }
