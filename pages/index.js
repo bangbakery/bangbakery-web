@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { Container, Heading, Flex, Stack } from '@chakra-ui/react'
 
 import Header from '../components/header'
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <Head>
         <title>BangBakery</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,12 +17,14 @@ export default function Home() {
       <main>
         <div id="hero" className="hero-home">
           <img src="/logos/logo.png" alt="Bang Bakery" />
-          <h2 className="tagline">Naturally handmade with love.</h2>
+          <Heading as="h2" className="tagline">
+            Naturally handmade with love.
+          </Heading>
           <Link href="/order">
             <a className="order button">Order Breads</a>
           </Link>
         </div>
       </main>
-    </div>
+    </Container>
   )
 }

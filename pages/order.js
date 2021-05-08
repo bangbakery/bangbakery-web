@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import { Heading, Flex, Stack } from '@chakra-ui/react'
+import { Container, Heading, Flex, Stack } from '@chakra-ui/react'
 
 import Header from '../components/header'
 import Products from '../components/products'
 
 export default function OrderPage() {
   return (
-    <div>
+    <Container>
       <Head>
         <title>Order breads from BangBakery</title>
       </Head>
@@ -20,6 +20,6 @@ export default function OrderPage() {
       </Flex>
 
       <Products />
-    </div>
+    </Container>
   )
 }

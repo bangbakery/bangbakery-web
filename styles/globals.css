@@ -35,14 +35,15 @@ a {
   background-image: url('/backgrounds/hero-home.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20px;
+  padding: 10px;
 }
 
 .hero-home .tagline {
+  text-align: center;
   font-family: 'Passion One', cursive;
   color: #fff;
   font-size: 48px;
-  max-width: 180px;
+  max-width: 400px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #3a0000;
 }

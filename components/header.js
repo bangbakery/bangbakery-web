@@ -1,3 +1,5 @@
+import NextLink from 'next/link'
+
 export default function Header() {
   return (
     <header className="header">
@@ -5,7 +7,11 @@ export default function Header() {
         <img src="/icons/menu.svg" alt="menu" />
       </div>
       <div>
-        <img src="/logos/logo-white.svg" alt="Bang Bakery" />
+        <NextLink href="/">
+          <a>
+            <img src="/logos/logo-white.svg" alt="Bang Bakery" />
+          </a>
+        </NextLink>
       </div>
       <div>
         <img src="/icons/cart.svg" alt="cart" />
