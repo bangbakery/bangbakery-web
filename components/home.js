@@ -8,6 +8,7 @@ import {
   Image,
   Text,
 } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 
 import Tagline from '../components/tagline'
 
@@ -16,14 +17,22 @@ export default function Home() {
     <main>
       <Stack
         id="hero"
-        minHeight="95vh"
-        bgImage="url('/backgrounds/hero-home.jpeg')"
-        bgRepeat="no-repeat"
+        sx={{
+          background:
+            'linear-gradient(180deg, rgba(222, 50, 153, 0.5) 0%, rgba(255, 255, 255, 0) 100%), url("/backgrounds/hero-home.jpeg")',
+          'background-repeat': 'no-repeat',
+        }}
         bgSize="cover"
         p="10"
       >
         <VStack spacing="10">
-          <img src="/logos/logo.png" alt="Bang Bakery" />
+          <motion.div
+            initial={{ scale: 0.5 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.25 }}
+          >
+            <img src="/logos/logo.png" alt="Bang Bakery" />
+          </motion.div>
           <Tagline>Naturally handmade with love.</Tagline>
           <Link href="/order">
             <Button
@@ -51,14 +60,23 @@ export default function Home() {
           }}
           bgRepeat="repeat"
           height="400px"
-        />
-        <Stack mt="-300px" px="5" justify="center" align="center" spacing="10">
+          align="center"
+          justify="center"
+        >
           <Image
             src="/images/sourdough.webp"
             alt="Sourdough Bread"
             boxSize="300px"
             objectFit="contain"
           />
+        </Flex>
+        <Stack
+          // marginTop="-300px"
+          px="5"
+          justify="center"
+          align="center"
+          spacing="10"
+        >
           <Stack spacing="5">
             <Tagline align="left">Sourdough bread made from scratch.</Tagline>
             <Text color="yellow.800" fontSize="xl">
