@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import { Heading, Flex } from '@chakra-ui/react'
+import { Heading, Flex, Stack } from '@chakra-ui/react'
 
 import Header from '../components/header'
+import Products from '../components/products'
 
 export default function OrderPage() {
   return (
@@ -17,6 +18,8 @@ export default function OrderPage() {
           Let's order some bread
         </Heading>
       </Flex>
+
+      <Products />
     </div>
   )
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "image": "/products/sourdough-regular.jpg",
+    "name": "Regular",
+    "price": 200,
+    "quantity": 10
+  },
+  {
+    "image": "/products/sourdough-regular.jpg",
+    "name": "Multigrain",
+    "price": 220,
+    "quantity": 10
+  },
+  {
+    "image": "/products/sourdough-regular.jpg",
+    "name": "Olive",
+    "price": 220,
+    "quantity": 10
+  },
+  {
+    "image": "/products/sourdough-regular.jpg",
+    "name": "Walnut & Raisin",
+    "price": 250,
+    "quantity": 10
+  },
+  {
+    "image": "/products/sourdough-regular.jpg",
+    "name": "Hokkaido",
+    "price": 300,
+    "quantity": 5
+  }
+]
