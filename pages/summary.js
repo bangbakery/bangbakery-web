@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Link from "next/link";
-import { Container, Heading, Flex, Button } from "@chakra-ui/react";
+import Head from 'next/head'
+import Link from 'next/link'
+import { Container, Heading, Flex, Button } from '@chakra-ui/react'
 
-import Header from "../components/header";
-import SummaryForm from "../components/summary-form";
+import Header from '../components/header'
+import SummaryForm from '../components/summary-form'
 
 export default function SummaryPage() {
   return (
@@ -24,11 +24,11 @@ export default function SummaryPage() {
           <Button as="a" width="100%" bg="#FFFF01" size="lg" rounded="full">
             <Flex justify="space-between" width="100%">
               <span>Place your order</span>
-              <span>₱450</span>
+              <span>₱480</span>
             </Flex>
           </Button>
         </Link>
       </Flex>
     </Container>
-  );
+  )
 }
