@@ -1,6 +1,13 @@
-import { Stack, Heading, SimpleGrid } from '@chakra-ui/react'
+import {
+  Stack,
+  Heading,
+  SimpleGrid,
+  IconButton,
+  HStack,
+} from "@chakra-ui/react";
+import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 
-import dataProducts from '../data/products.json'
+import dataProducts from "../data/products.json";
 
 export default function Products() {
   return (
@@ -15,9 +22,28 @@ export default function Products() {
             <Heading as="h3" size="md" fontWeight="regular">
               ₱{product.price}
             </Heading>
+            <HStack>
+              <IconButton
+                aria-label="decrease amount"
+                isRound
+                size="sm"
+                colorScheme="red"
+                variant="outline"
+                icon={<MinusIcon />}
+              />
+              <span>0</span>
+              <IconButton
+                aria-label="increase amount"
+                isRound
+                size="sm"
+                colorScheme="green"
+                variant="outline"
+                icon={<AddIcon />}
+              />
+            </HStack>
           </Stack>
-        )
+        );
       })}
     </SimpleGrid>
-  )
+  );
 }
