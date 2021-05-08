@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "name": "Regular",
+    "price": 200,
+    "amount": 1
+  },
+  {
+    "id": "2",
+    "name": "Walnut & Raisin",
+    "price": 250,
+    "amount": 1
+  }
+]
