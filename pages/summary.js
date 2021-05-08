@@ -20,7 +20,7 @@ export default function SummaryPage() {
         </Heading>
       </Flex>
       <Flex width="100%" p="5" bg="purple.800">
-        <Link href="/summary">
+        <Link href="/payment">
           <Button as="a" width="100%" bg="#FFFF01" size="lg" rounded="full">
             <Flex justify="space-between" width="100%">
               <span>Place your order</span>
