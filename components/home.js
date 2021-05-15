@@ -21,14 +21,14 @@ export default function Home() {
           background:
             'linear-gradient(180deg, rgba(222, 50, 153, 0.5) 0%, rgba(255, 255, 255, 0) 100%), url("/backgrounds/hero-home.jpeg")',
           backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
         }}
-        bgSize="cover"
         p="10"
       >
-        <VStack spacing="10">
+        <VStack spacing="5">
           <motion.div
             initial={{ scale: 0.5 }}
-            animate={{ scale: 1 }}
+            animate={{ scale: 0.75 }}
             transition={{ duration: 0.25 }}
           >
             <img src="/logos/logo.png" alt="Bang Bakery" />

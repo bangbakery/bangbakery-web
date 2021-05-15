@@ -19,7 +19,7 @@ export default function Products() {
   if (!data) return <div>Loading products...</div>
 
   return (
-    <SimpleGrid columns={2} spacing={10} p={5} mb="100px">
+    <SimpleGrid columns={2} spacing={10} p={5} pb="100px">
       {data.map((product, index) => {
         return (
           <Stack key={product.name}>

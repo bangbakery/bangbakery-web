@@ -8,6 +8,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  background-color: var(--chakra-colors-gray-900) !important;
+}
+
 * {
   box-sizing: border-box;
 }

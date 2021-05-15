@@ -2,12 +2,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { Container, Heading, Flex, Button } from '@chakra-ui/react'
 
+import Layout from '../components/layout'
 import Header from '../components/header'
 import SummaryForm from '../components/summary-form'
 
 export default function SummaryPage() {
   return (
-    <Container p="0">
+    <Layout>
       <Head>
         <title>Order Summary - BangBakery</title>
       </Head>
@@ -21,7 +22,15 @@ export default function SummaryPage() {
       </Flex>
       <Flex width="100%" p="2" bg="purple.800">
         <Link href="/payment">
-          <Button as="a" width="100%" bg="#FFFF01" size="lg" rounded="full">
+          <Button
+            as="a"
+            cursor="pointer"
+            width="100%"
+            size="lg"
+            rounded="full"
+            bg="#FFFF01"
+            _hover={{ bg: 'yellow.300' }}
+          >
             <Flex justify="space-between" width="100%">
               <span>Place your order</span>
               <span>₱480</span>
@@ -29,6 +38,6 @@ export default function SummaryPage() {
           </Button>
         </Link>
       </Flex>
-    </Container>
+    </Layout>
   )
 }

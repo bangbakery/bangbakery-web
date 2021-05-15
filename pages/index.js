@@ -2,13 +2,14 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { Container, Heading, Flex, Stack } from '@chakra-ui/react'
 
+import Layout from '../components/layout'
 import Header from '../components/header'
 import Home from '../components/home'
 import Footer from '../components/footer'
 
 export default function HomePage() {
   return (
-    <Container p="0">
+    <Layout>
       <Head>
         <title>BangBakery</title>
         <link rel="icon" href="/favicon.ico" />
@@ -17,6 +18,6 @@ export default function HomePage() {
       <Header />
       <Home />
       <Footer />
-    </Container>
+    </Layout>
   )
 }

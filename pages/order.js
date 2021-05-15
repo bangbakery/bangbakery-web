@@ -2,12 +2,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { Container, Heading, Flex, Button } from '@chakra-ui/react'
 
+import Layout from '../components/layout'
 import Header from '../components/header'
 import Products from '../components/products'
 
 export default function OrderPage() {
   return (
-    <Container p="0">
+    <Layout>
       <Head>
         <title>Order breads from BangBakery</title>
       </Head>
@@ -22,9 +23,24 @@ export default function OrderPage() {
 
       <Products />
 
-      <Flex width="100%" p="2" bg="purple.800" position="fixed" bottom="0">
-        <Link href="/summary">
-          <Button as="a" width="100%" bg="#FFFF01" size="lg" rounded="full">
+      <Flex
+        width="100%"
+        p="2"
+        bg="purple.800"
+        position="fixed"
+        bottom="-1px"
+        maxW="60ch"
+      >
+        <Link href="/summary" id="order-button">
+          <Button
+            as="a"
+            cursor="pointer"
+            width="100%"
+            size="lg"
+            rounded="full"
+            bg="#FFFF01"
+            _hover={{ bg: 'yellow.300' }}
+          >
             <Flex justify="space-between" width="100%">
               <span>Order 2 items</span>
               <span>₱450</span>
@@ -32,6 +48,6 @@ export default function OrderPage() {
           </Button>
         </Link>
       </Flex>
-    </Container>
+    </Layout>
   )
 }

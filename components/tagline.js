@@ -10,7 +10,7 @@ export default function Tagline({ align = 'center', children }) {
       maxW="420px"
       fontFamily="Passion One"
       sx={{
-        WebkitTextStrokeWidth: '0.5px',
+        WebkitTextStrokeWidth: '1px',
         WebkitTextStrokeColor: '#3a0000',
       }}
     >
