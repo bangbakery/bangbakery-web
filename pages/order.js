@@ -14,14 +14,15 @@ export default function OrderPage() {
 
       <Header />
 
-      <Flex justify="center" p={2} bg="pink.500" color="white">
-        <Heading as="h1" size="xl">
+      <Flex px={5} py={2} bg="pink.500" color="white">
+        <Heading as="h1" size="md">
           Let's order some bread
         </Heading>
       </Flex>
 
       <Products />
-      <Flex width="100%" p="5" bg="purple.800" position="fixed" bottom="0">
+
+      <Flex width="100%" p="2" bg="purple.800" position="fixed" bottom="0">
         <Link href="/summary">
           <Button as="a" width="100%" bg="#FFFF01" size="lg" rounded="full">
             <Flex justify="space-between" width="100%">

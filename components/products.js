@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import {
   Stack,
   Heading,
@@ -5,15 +6,21 @@ import {
   IconButton,
   HStack,
   Text,
-} from "@chakra-ui/react";
-import { MinusIcon, AddIcon } from "@chakra-ui/icons";
+} from '@chakra-ui/react'
+import { MinusIcon, AddIcon } from '@chakra-ui/icons'
 
-import dataProducts from "../data/products.json";
+import { supabase } from '../lib/supabase'
+import { useSWR, fetcher } from '../lib/swr'
 
 export default function Products() {
+  const { data, error } = useSWR('/api/products', fetcher)
+
+  if (error) return <div>Failed to load products</div>
+  if (!data) return <div>Loading products...</div>
+
   return (
     <SimpleGrid columns={2} spacing={10} p={5} mb="100px">
-      {dataProducts.map((product, index) => {
+      {data.map((product, index) => {
         return (
           <Stack key={product.name}>
             <img src={product.image} alt={product.name} />
@@ -44,8 +51,8 @@ export default function Products() {
             </HStack>
             <Text fontSize="md">{product.quantity} breads left</Text>
           </Stack>
-        );
+        )
       })}
     </SimpleGrid>
-  );
+  )
 }

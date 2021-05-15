@@ -6,9 +6,6 @@ export default function Header({ storeStatus = 'close' }) {
     <Stack spacing="0">
       <HStack as="header" bg="teal.400" p="5" justify="space-between">
         <div>
-          <img src="/icons/menu.svg" alt="menu" />
-        </div>
-        <div>
           <NextLink href="/">
             <a>
               <img src="/logos/logo-white.svg" alt="Bang Bakery" />
@@ -28,7 +25,6 @@ export default function Header({ storeStatus = 'close' }) {
         bg="pink.700"
         color="white"
         fontWeight="bold"
-        fontSize="xl"
         p="1"
         px="5"
         spacing="0"

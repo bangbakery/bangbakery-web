@@ -1,4 +1,5 @@
 import {
+  HStack,
   Heading,
   Stack,
   FormControl,
@@ -12,26 +13,31 @@ import {
   FormErrorMessage,
   FormHelperText,
   useAccordionItemState,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
 
-import dataCart from "../data/cart.json";
+import dataCart from '../data/cart.json'
 
 export default function SummaryForm() {
   return (
     <Stack p="5" spacing="8">
       <Stack>
-        <Heading color="teal">Personal Information</Heading>
+        <Heading size="lg" color="teal">
+          Personal Information
+        </Heading>
         <FormControl id="name">
           <FormLabel>Your name</FormLabel>
           <Input type="text" />
         </FormControl>
         <FormControl id="phone">
           <FormLabel>Your phone</FormLabel>
-          <Input type="tel" />
+          <Input type="tel" placeholder="+63 123 455 789" />
         </FormControl>
       </Stack>
+
       <Stack>
-        <Heading color="teal">Delivery Information</Heading>
+        <Heading size="lg" color="teal">
+          Delivery Information
+        </Heading>
         <FormControl id="address">
           <FormLabel>Please type your full address</FormLabel>
           <Textarea placeholder="House/Condo number, Street address, Region" />
@@ -46,20 +52,28 @@ export default function SummaryForm() {
           </Select>
         </FormControl>
       </Stack>
+
       <Stack>
-        <Heading color="teal">Product Summary</Heading>
+        <Heading size="lg" color="teal">
+          Product Summary
+        </Heading>
         {dataCart.map((item, index) => {
           return (
-            <Flex justify="space-between">
-              <Text flex="2">{item.name}</Text>
-              <Text flex="1">{item.amount}x</Text>
-              <Text flex="1">₱{item.price}</Text>
+            <Flex key={item.name} justify="space-between">
+              <Text>{item.name}</Text>
+              <HStack>
+                <Text>{item.amount}×</Text>
+                <Text>₱{item.price}</Text>
+              </HStack>
             </Flex>
-          );
+          )
         })}
       </Stack>
+
       <Stack>
-        <Heading color="teal">Payment Summary</Heading>
+        <Heading size="lg" color="teal">
+          Payment Summary
+        </Heading>
         <Flex justify="space-between">
           <Text>Total Price</Text>
           <Text>₱450</Text>
@@ -75,5 +89,5 @@ export default function SummaryForm() {
         </Flex>
       </Stack>
     </Stack>
-  );
+  )
 }

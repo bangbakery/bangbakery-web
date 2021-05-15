@@ -20,7 +20,7 @@ export default function Home() {
         sx={{
           background:
             'linear-gradient(180deg, rgba(222, 50, 153, 0.5) 0%, rgba(255, 255, 255, 0) 100%), url("/backgrounds/hero-home.jpeg")',
-          'background-repeat': 'no-repeat',
+          backgroundRepeat: 'no-repeat',
         }}
         bgSize="cover"
         p="10"
