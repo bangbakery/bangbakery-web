@@ -8,12 +8,11 @@ import {
   Stack,
   Button,
 } from '@chakra-ui/react'
-
-import { supabase } from '../../lib/supabase'
-import useSession from '../../hooks/use-session'
+import { useSupabase, useUser } from 'use-supabase'
 
 export default function AdminAuth() {
-  const session = useSession()
+  const supabase = useSupabase()
+  const user = useUser()
 
   const {
     register,
@@ -28,19 +27,26 @@ export default function AdminAuth() {
     })
   }
 
-  if (session) {
-    return <div>you are logged in</div>
+  if (user) {
+    return <div>You are logged in as {user.email}</div>
   }
-
   return (
     <Stack as="form" p="10" spacing="5" onSubmit={handleSubmit(handleLogin)}>
       <FormControl id="email">
         <FormLabel>Email address</FormLabel>
-        <Input type="email" {...register('email', { required: true })} />
+        <Input
+          type="email"
+          defaultValue=""
+          {...register('email', { required: true })}
+        />
       </FormControl>
       <FormControl id="password">
         <FormLabel>Password</FormLabel>
-        <Input type="password" {...register('password', { required: true })} />
+        <Input
+          type="password"
+          defaultValue=""
+          {...register('password', { required: true })}
+        />
       </FormControl>
       <Button type="submit" colorScheme="teal" width="100%">
         Login

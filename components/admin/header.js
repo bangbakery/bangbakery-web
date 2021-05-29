@@ -1,9 +1,10 @@
 import NextLink from 'next/link'
 import { Stack, HStack, Text, Button } from '@chakra-ui/react'
-
-import { supabase } from '../../lib/supabase'
+import { useSupabase } from 'use-supabase'
 
 export default function AdminHeader() {
+  const supabase = useSupabase()
+
   const handleLogout = async () => {
     try {
       let { error } = await supabase.auth.signOut()

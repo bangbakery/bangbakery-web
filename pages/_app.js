@@ -5,11 +5,17 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 import SEO from '../next-seo.config'
 
+import { SupabaseContextProvider } from 'use-supabase'
+import { supabase } from '../lib/supabase'
+
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
       <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
+
+      <SupabaseContextProvider client={supabase}>
+        <Component {...pageProps} />
+      </SupabaseContextProvider>
     </ChakraProvider>
   )
 }

@@ -1,8 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import Layout from "../components/layout";
-import AdminHeader from "../components/admin/header";
-import AdminAuth from "../components/admin/auth";
+import Layout from '../components/layout'
+import AdminHeader from '../components/admin/header'
+import AdminAuth from '../components/admin/auth'
 
 export default function AdminPage() {
   return (
@@ -15,5 +15,5 @@ export default function AdminPage() {
       <AdminHeader />
       <AdminAuth />
     </Layout>
-  );
+  )
 }
