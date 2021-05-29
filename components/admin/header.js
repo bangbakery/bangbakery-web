@@ -1,7 +1,18 @@
-import NextLink from "next/link";
-import { Stack, HStack, Text, Button } from "@chakra-ui/react";
+import NextLink from 'next/link'
+import { Stack, HStack, Text, Button } from '@chakra-ui/react'
 
-export default function AdminHeader({ storeStatus = "close" }) {
+import { supabase } from '../../lib/supabase'
+
+export default function AdminHeader() {
+  const handleLogout = async () => {
+    try {
+      let { error } = await supabase.auth.signOut()
+      if (error) throw error
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <Stack spacing="0">
       <HStack as="header" bg="teal.400" p="5" justify="space-between">
@@ -13,11 +24,11 @@ export default function AdminHeader({ storeStatus = "close" }) {
           </NextLink>
         </div>
         <div>
-          <Button colorScheme="red" size="sm">
+          <Button colorScheme="red" size="sm" onClick={handleLogout}>
             Logout
           </Button>
         </div>
       </HStack>
     </Stack>
-  );
+  )
 }
