@@ -6,16 +6,16 @@ export default function Footer() {
       as="footer"
       direction="column"
       align="center"
-      bg="teal.400"
+      bg="blue.500"
       color="white"
       px="5"
       py="10"
-      spacing="5"
+      spacing="2"
     >
-      <Text fontSize="4xl" color="white" fontFamily="Passion One">
+      <Text fontSize="4xl" fontFamily="Passion One">
         Stay in touch
       </Text>
-      <Link href="https://instagram.com/thebangbakery">
+      <Link isExternal href="https://instagram.com/thebangbakery">
         <Image boxSize="30px" src="/images/instagram.svg" alt="Instagram" />
       </Link>
       <Text mt="5" fontWeight="bold">
