@@ -7,6 +7,9 @@ import {
   Input,
   Stack,
   Button,
+  Box,
+  Text,
+  Heading,
 } from '@chakra-ui/react'
 import { useSupabase, useUser } from 'use-supabase'
 
@@ -28,8 +31,20 @@ export default function AdminAuth() {
   }
 
   if (user) {
-    return <div>You are logged in as {user.email}</div>
+    return (
+      <Stack p="5" spacing="5">
+        <Text>
+          You are logged in as <br />
+          <b> {user.email}</b>
+        </Text>
+        <Box>
+          <Heading as="h2">Store Status</Heading>
+          <Button>Close</Button>
+        </Box>
+      </Stack>
+    )
   }
+
   return (
     <Stack as="form" p="10" spacing="5" onSubmit={handleSubmit(handleLogin)}>
       <FormControl id="email">
