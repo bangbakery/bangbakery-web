@@ -13,6 +13,8 @@ A site to sell handmade breads, especially sourdough. Visit [bangbakery.co](http
 
 ### General
 
+- Git
+  - Git conventional commit message: https://conventionalcommits.org
 - Markdown
 - HTML
 - CSS
@@ -25,5 +27,5 @@ A site to sell handmade breads, especially sourdough. Visit [bangbakery.co](http
 - Next.js
   - https://nextjs.org/docs/getting-started
   - https://nextjs.org/learn
--
--
+- Chakra UI
+- SWR
