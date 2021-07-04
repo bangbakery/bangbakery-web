@@ -14,6 +14,8 @@ import {
 import { useSupabase, useUser } from 'use-supabase'
 import AdminManageData from './manage-data'
 
+import AdminStoreStatus from './store-status'
+
 export default function AdminAuth() {
   const supabase = useSupabase()
   const user = useUser()
@@ -38,10 +40,7 @@ export default function AdminAuth() {
           You are logged in as <br />
           <b> {user.email}</b>
         </Text>
-        <Box>
-          <Heading as="h2">Store Status</Heading>
-          <Button>Close</Button>
-        </Box>
+        <AdminStoreStatus />
         <AdminManageData />
       </Stack>
     )
