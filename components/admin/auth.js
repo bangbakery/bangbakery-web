@@ -12,6 +12,7 @@ import {
   Heading,
 } from '@chakra-ui/react'
 import { useSupabase, useUser } from 'use-supabase'
+import AdminManageData from './manage-data'
 
 import AdminStoreStatus from './store-status'
 
@@ -40,6 +41,7 @@ export default function AdminAuth() {
           <b> {user.email}</b>
         </Text>
         <AdminStoreStatus />
+        <AdminManageData />
       </Stack>
     )
   }
