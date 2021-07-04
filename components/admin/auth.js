@@ -13,6 +13,8 @@ import {
 } from '@chakra-ui/react'
 import { useSupabase, useUser } from 'use-supabase'
 
+import AdminStoreStatus from './store-status'
+
 export default function AdminAuth() {
   const supabase = useSupabase()
   const user = useUser()
@@ -37,10 +39,7 @@ export default function AdminAuth() {
           You are logged in as <br />
           <b> {user.email}</b>
         </Text>
-        <Box>
-          <Heading as="h2">Store Status</Heading>
-          <Button>Close</Button>
-        </Box>
+        <AdminStoreStatus />
       </Stack>
     )
   }
