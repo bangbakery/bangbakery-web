@@ -12,6 +12,7 @@ import {
   Heading,
 } from '@chakra-ui/react'
 import { useSupabase, useUser } from 'use-supabase'
+import AdminManageData from './manage-data'
 
 export default function AdminAuth() {
   const supabase = useSupabase()
@@ -41,6 +42,7 @@ export default function AdminAuth() {
           <Heading as="h2">Store Status</Heading>
           <Button>Close</Button>
         </Box>
+        <AdminManageData />
       </Stack>
     )
   }
