@@ -21,38 +21,57 @@ export default function Products() {
   return (
     <SimpleGrid columns={2} spacing={10} p={5} pb="100px">
       {data.map((product, index) => {
-        return (
-          <Stack key={product.name}>
-            <img src={product.image} alt={product.name} />
-            <Heading as="h2" size="md" fontWeight="regular">
-              {product.name}
-            </Heading>
-            <Heading as="h3" size="md" fontWeight="regular">
-              ₱{product.price}
-            </Heading>
-            <HStack>
-              <IconButton
-                aria-label="decrease amount"
-                isRound
-                size="sm"
-                colorScheme="red"
-                variant="outline"
-                icon={<MinusIcon />}
-              />
-              <span>0</span>
-              <IconButton
-                aria-label="increase amount"
-                isRound
-                size="sm"
-                colorScheme="green"
-                variant="outline"
-                icon={<AddIcon />}
-              />
-            </HStack>
-            <Text fontSize="md">{product.quantity} breads left</Text>
-          </Stack>
-        )
+        return <ProductCard key={product.id} product={product} />
       })}
     </SimpleGrid>
+  )
+}
+
+const ProductCard = ({ product }) => {
+  const [amount, setAmount] = useState(0)
+
+  const decreaseAmount = () => {
+    if (amount >= 1) {
+      setAmount(amount - 1)
+    }
+  }
+
+  const increaseAmount = () => {
+    if (amount < 10) {
+      setAmount(amount + 1)
+    }
+  }
+  return (
+    <Stack key={product.name}>
+      <img src={product.image} alt={product.name} />
+      <Heading as="h2" size="md" fontWeight="regular">
+        {product.name}
+      </Heading>
+      <Heading as="h3" size="md" fontWeight="regular">
+        ₱{product.price}
+      </Heading>
+      <HStack>
+        <IconButton
+          aria-label="decrease amount"
+          isRound
+          size="sm"
+          colorScheme="red"
+          variant="outline"
+          icon={<MinusIcon />}
+          onClick={decreaseAmount}
+        />
+        <span>{amount}</span>
+        <IconButton
+          aria-label="increase amount"
+          isRound
+          size="sm"
+          colorScheme="green"
+          variant="outline"
+          icon={<AddIcon />}
+          onClick={increaseAmount}
+        />
+      </HStack>
+      <Text fontSize="md">{product.quantity} breads left</Text>
+    </Stack>
   )
 }
