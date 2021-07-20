@@ -42,8 +42,8 @@ export default function OrderPage() {
             _hover={{ bg: 'yellow.300' }}
           >
             <Flex justify="space-between" width="100%">
-              <span>Order 2 items</span>
-              <span>₱450</span>
+              <span>Order 0 item</span>
+              <span>₱ 0</span>
             </Flex>
           </Button>
         </Link>
